@@ -26,3 +26,4 @@ This system is a testament to the rigorous application of operating system princ
     Provides administrative control over the hotel, allowing the simulation to be terminated.
     Signals the hotel manager to begin the termination process when the hotel is to be closed.
 
+Key Features and Concepts Demonstrated
