@@ -239,8 +239,17 @@ int main()
         printf("Waiter has not detached from hotel manager\n");
     }
 
+    // table process cleanup
     struct shmid_ds h;
     shmctl(shmid1, IPC_STAT, &h);
     printf("%d is the no of processes attached for hotel manger shared memry and is shmid is %d\n", h.shm_nattch, shmid1);
     
+    if (shmctl(shmid, IPC_RMID, NULL) == -1)
+    {
+        printf("waiter got an error in detleting shared memory of table\n");
+    }
+    else
+    {
+        printf("waiter detleted shared memory of table\n");
+    }
 }

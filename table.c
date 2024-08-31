@@ -252,11 +252,4 @@ int main()
     shmctl(shmid, IPC_STAT, &buf);
     printf("Number of processes attached: %d\n", buf.shm_nattch);
 
-    // //delete shared memory
-    // if (shmctl(shmid, IPC_RMID, NULL) == -1) {
-    //     perror("Error in removing shared memory\n");
-    // }
-    // else {
-    //     printf("Removed shared memory segment\n");
-    // }
 }
